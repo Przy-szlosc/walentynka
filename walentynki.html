@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>walentynka</title>
+    <style>
+        body {
+            background: url(peakpx.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .buttons button {
+            color: white;
+            margin: 0 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #yes {
+            background-color: red;
+        }
+        #no {
+            background-color: darkslategray;
+        }
+        .buttons button span {
+            color: white;
+            font-weight: bold;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            padding: 20px;
+            z-index: 2;
+        }
+        #modal img {
+            max-width: 100%;
+            height: auto;
+        }
+        #modal button {
+            display: block;
+            margin: 20px auto 0;
+        }
+        p {
+            color: rgb(0, 0, 0);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts"></div>
+    <div class="content">
+        <p>!!!!!CZY ZOSTANIESZ MOJA WALENTYNKA???????!!!</p>
+        <div class="buttons">
+            <div style="text-align: center;">
+                <img src="yes.png" alt="Obrazek Tak" style="max-width: 50px; margin-bottom: 10px;">
+                <button id="yes"><span>Tak</span></button>
+            </div>
+            <div style="text-align: center;">
+                <img src="toppng.com-sad-broken-heart-emoji-433x451.png" alt="Obrazek Nie" style="max-width: 50px; margin-bottom: 10px;">
+                <button id="no"><span>Nie</span></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal">
+        <p>JUPI KOCHAM CIE</p>
+        <div class="tenor-gif-embed" data-postid="23730276" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/fast-cat-cat-excited-jumping-gif-23730276">Fast Cat Cat Excited Sticker</a>from <a href="https://tenor.com/search/fast+cat-stickers">Fast Cat Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <button id="close">Zamknij</button>
+    </div>
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'block';
+        });
+        document.getElementById('close').addEventListener('click', function() {
+            document.getElementById('modal').style.display = 'none';
+        });
+        document.getElementById('no').addEventListener('click', function() {
+            alert('Nie ma takich szans, gagatku');
+        });
+    </script>
+</body>
+</html>
